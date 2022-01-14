@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darker_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CustomerMainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/ic_cook_hat"/>
+
+    <TextView
+        android:id="@+id/recent_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:text="@string/recent_items"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/food_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/recent_title"
+        android:layout_marginBottom="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recent_foods_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/food_list_item"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/available_meals_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/food_list_layout"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:text="@string/foods_available"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/available_meals_layout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/available_meals_title"
+        android:layout_marginBottom="16dp">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/available_meals_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/food_list_item"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/categories_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/available_meals_layout"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:text="@string/categories"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/categories_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categories_title"
+        android:layout_marginBottom="16dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categories_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/category_list_item"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

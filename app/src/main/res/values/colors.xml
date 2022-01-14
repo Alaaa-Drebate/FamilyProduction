@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@android:color/white</color>
+    <color name="colorPrimaryDark">@android:color/white</color>
+    <color name="colorAccent">#BE69FA</color>
+
+    <color name="colorAccentLight">#D095FA</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="darker_white">#F8F8F8</color>
+    <color name="darker_white_2">#CFCCCC</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="bright_black">#696969</color>
+
+    <color name="table_header_bg">#f3f3f3</color>
+
+    <color name="status_new">#0275d8</color>
+    <color name="status_rejected">#d9534f</color>
+    <color name="status_processing">#f0ad4e</color>
+    <color name="status_completed">#5cb85c</color>
+</resources>

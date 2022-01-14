@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darker_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FoodByCategoryActivity">
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:text="salads"
+        android:layout_margin="16dp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/available_meals_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/food_by_category_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/food_list_item"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

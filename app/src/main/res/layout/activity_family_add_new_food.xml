@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FamilyAddNewFoodActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:isScrollContainer="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            >
+
+            <TextView
+                android:id="@+id/headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/colorAccent"
+                android:text="@string/add_new_food"/>
+
+            <TextView
+                android:id="@+id/name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:layout_below="@id/headline"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/food_name"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/upload_image_title"
+                android:layout_alignBottom="@id/name_title"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:hint="@string/meal_name"/>
+
+            <TextView
+                android:id="@+id/description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:layout_below="@id/name_title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/description"/>
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/upload_image_title"
+                android:layout_alignBottom="@id/description_title"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="16dp"
+                android:inputType="textMultiLine"
+                android:textSize="16sp"
+                android:hint="@string/description"/>
+
+
+
+            <TextView
+                android:id="@+id/price_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/description_title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/price"/>
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/upload_image_title"
+                android:layout_alignBottom="@id/price_title"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="16dp"
+                android:inputType="numberDecimal"
+                android:textSize="16sp"
+                android:hint="@string/price"/>
+
+            <TextView
+                android:id="@+id/category_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/price_title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/categories"/>
+
+            <Spinner
+                android:id="@+id/category_chooser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/upload_image_title"
+                android:layout_alignBottom="@id/category_title"
+                android:layout_marginEnd="30dp" />
+
+
+
+            <TextView
+                android:id="@+id/upload_image_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="20dp"
+                android:layout_below="@id/category_title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@string/upload_image"/>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/upload_image_title"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_image_24"/>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
